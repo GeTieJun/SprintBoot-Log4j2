@@ -51,14 +51,10 @@ public class Log4jTestApplicationTests {
      * @param username
      */
     public void testUserName(String username) {
-    	if(null != properties.getUserName()) {
-    		if(username.equals(properties.getUserName())) {
-        		logger.info(">> The user name is: " + properties.getUserName());
-        	}else{
-        		logger.info(">> The user name not equal XiaoMing, The user name is: " + properties.getUserName());
-        	}
-    	}else {
-    		logger.error(">> The system user name is null, place check.");
+		if(username.equals(properties.getUserName())) {
+    		logger.info(">> The user name is: " + properties.getUserName());
+    	}else{
+    		logger.info(">> The user name not equal XiaoMing, The user name is: " + properties.getUserName());
     	}
     }
     
@@ -70,7 +66,7 @@ public class Log4jTestApplicationTests {
     	if(password.equals(properties.getPassword())) {
     		logger.info(">> The password is: " + properties.getPassword());
     	}else {
-    		logger.error(">> The password is error, The password is: " + properties.getPassword());
+    		logger.info(">> The password is error, The password is: " + properties.getPassword());
     	}
     }
 }
